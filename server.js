@@ -10,7 +10,10 @@ app.get('/', (req, res) =>{
 });
 
 app.get('/about', (req, res) =>{
-	res.send('This is my about page');
+	res.render('about.hbs', {
+		pageTitle : 'About Page',
+		currentYear : new Date().getFullYear()
+	});
 });
 
 app.listen(3000, () =>{
