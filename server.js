@@ -6,7 +6,7 @@ app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) =>{
-	res.render('index.hbs',{
+	res.render('home.hbs',{
 		name : 'Hitesh',
 		currentYear : new Date().getFullYear(),
 		welcomeMessage : 'Welcome to my website'
